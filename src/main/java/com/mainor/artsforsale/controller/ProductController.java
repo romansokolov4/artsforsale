@@ -19,10 +19,10 @@ public class ProductController {
         productService.saveProduct(product);
         return "New product is added";
     }
-    @GetMapping("/concatenate")
-    public String concatenateStrings(@RequestParam("str1") String str1, @RequestParam("str2") String str2) {
-        String result = str1 +" "+ str2;
-        return result;
+    @GetMapping("/name")
+    public String concatenateStrings(@RequestParam("firstName") String str1, @RequestParam("lastName") String str2) {
+        String fullName = str1 +" "+ str2;
+        return fullName;
     }
 
     @GetMapping("/getAll")
